@@ -49,9 +49,9 @@ net user backdoor_user /active:no
 ```
 ![[Pasted image 20260804212437.png]]
 # Documentação e Escalonamento para N2
-=====================================================
-=====================================================
+===============================================================
 RELATÓRIO DE ESCALONAMENTO DE INCIDENTE - SOC N1 
+===============================================================
 ID do Incidente: INC-2026-0044
 Data/Hora da Detecção: 04/08/2026 - 20:50
 Analista Responsável: Victor Revoredo
