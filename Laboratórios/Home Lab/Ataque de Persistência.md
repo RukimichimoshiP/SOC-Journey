@@ -21,6 +21,9 @@
 	1. Se confirmado Verdadeiro Positivo (TP), abrir chamado de Nível 2 solicitando análise forense do binário executado.
 # Relatório Ação N1
 ***Alertas:***
+
+![Regra de Disparo](Imagem/Pastedimage20260804205933.png)
+
 ## 5W1H
 1. ***Who*** -> vboxuser
 2. ***What*** -> Criação de conta local + elevação para o grupo Administradores.
@@ -47,6 +50,9 @@ Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" 
 ```
 net user backdoor_user /active:no
 ```
+
+![Regra de Disparo](Imagem/Pastedimage20260804212437.png)
+
 # Documentação e Escalonamento para N2
 
 RELATÓRIO DE ESCALONAMENTO DE INCIDENTE - SOC N1 
@@ -63,8 +69,17 @@ Identificada criação não autorizada de usuário local ("backdoor_user") e adi
 - Usuário comprometido/utilizado: Administrador
 ## 3. Evidências / IOCs:
 - Event ID 4720 (User Created: backdoor_user)
+
+![Regra de Disparo](Imagem/Pastedimage20260804213601.png)
+  
 - Event ID 4732 (Group Member Added: Administradores)
+
+![Regra de Disparo](Imagem/Pastedimage0260804213933.png)
+  
 - Registro alterado: HKCU\Software\Microsoft\Windows\CurrentVersion\Run (Valor: MaliciousTask)
+
+![Regra de Disparo](Imagem/Pastedimage20260804214231.png)
+  
 # 4. Ações de Contenção Aplicadas (N1):
 - Conta "backdoor_user" desabilitada via PowerShell às 21:21.
 - Chave de registro "MaliciousTask" removida.
