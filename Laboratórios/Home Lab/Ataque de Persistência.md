@@ -1,6 +1,6 @@
 # Playbook
 ***Regra de Disparo de Alerta:***
-![[Pasted image 20260804203001.png]]
+![[Laboratórios/Home Lab/Imagem/Pasted image 20260804203001.png]]
 
 ***No disparo do alerta anterior, realizar:***
 
