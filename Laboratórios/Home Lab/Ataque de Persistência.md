@@ -1,6 +1,5 @@
 # Playbook
 ***Regra de Disparo de Alerta:***
-![[Laboratórios/Home Lab/Imagem/Pasted image 20260804203001.png]]
 
 ***No disparo do alerta anterior, realizar:***
 
@@ -20,7 +19,6 @@
 	1. Se confirmado Verdadeiro Positivo (TP), abrir chamado de Nível 2 solicitando análise forense do binário executado.
 # Relatório Ação N1
 ***Alertas:***
-![[Pasted image 20260804205933.png]]
 ## 5W1H
 1. ***Who*** -> vboxuser
 2. ***What*** -> Criação de conta local + elevação para o grupo Administradores.
@@ -47,11 +45,10 @@ Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" 
 ```
 net user backdoor_user /active:no
 ```
-![[Pasted image 20260804212437.png]]
 # Documentação e Escalonamento para N2
-===============================================================
+
 RELATÓRIO DE ESCALONAMENTO DE INCIDENTE - SOC N1 
-===============================================================
+
 ID do Incidente: INC-2026-0044
 Data/Hora da Detecção: 04/08/2026 - 20:50
 Analista Responsável: Victor Revoredo
@@ -63,11 +60,9 @@ Identificada criação não autorizada de usuário local ("backdoor_user") e adi
 - ***IP***: 10.0.0.6
 - Usuário comprometido/utilizado: Administrador
 ## 3. Evidências / IOCs:
-- Event ID 4720 (User Created: backdoor_user)	![[Pasted image 20260804213601.png]]
+- Event ID 4720 (User Created: backdoor_user)
 - Event ID 4732 (Group Member Added: Administradores)
-![[Pasted image 20260804213933.png]]
 - Registro alterado: HKCU\Software\Microsoft\Windows\CurrentVersion\Run (Valor: MaliciousTask)
-![[Pasted image 20260804214231.png]]
 # 4. Ações de Contenção Aplicadas (N1):
 - Conta "backdoor_user" desabilitada via PowerShell às 21:21.
 - Chave de registro "MaliciousTask" removida.
