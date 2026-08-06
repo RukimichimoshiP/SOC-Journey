@@ -1,6 +1,8 @@
 # Playbook
 ***Regra de Disparo de Alerta:***
-![Disparo de Alerta](Laboratórios/Home Lab/Imagem/Pasted image 20260804203001.png)
+
+![Regra de Disparo](Imagem/Pastedimage20260804203001.png)
+
 ***No disparo do alerta anterior, realizar:***
 
 - ***Triagem N1:***
